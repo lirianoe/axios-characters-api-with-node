@@ -29,9 +29,10 @@ const index = require("./routes/index.routes");
 app.use("/", index);
 
 const charactersRoutes = require("./routes/characters.routes");
-app.use("/", charactersRoutes);
+app.use("/characters", charactersRoutes);
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 
 module.exports = app;
+
